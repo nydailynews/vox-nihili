@@ -160,5 +160,55 @@
         </div>
     </div>
 </div>
+<script>
+// Adapted from http://extras.denverpost.com/app/bill-tracker/bills/ , adapted from http://www.soliantconsulting.com/blog/2013/02/title-generator-using-markov-chains
+var markov = {
+    titles: ["there is no darkness without light","dragons or else","steel over ice","the night will claim you in the end","no hope on the mountain","winter's child slays","the last word you will hear is dalgroth","for every sigil comes an oath","walk with me through the valley of shadows","give not, yield not","without sunlight no birds shall fly","a warrior's heart lies not in the dirt","stack that gold high","wither the trees of hate","the past lays its swords on the present","the sea calls for noone","winds blow through death's door","muster strength in the morning","ice before fire","crush your enemies, see them driven before you, and hear the lamentation of their women","death to the world","a sword's thrust is but half the story","life for valeria","why are they trying to kill us","brittle bones make not of kings","a queen's word makes a king's oath","ships sail high, shovels bury the dead","fire and wind come from the sky","two stand against many","flesh is stronger than steel","enough talk!","look into the eyes of the dragon and despair","worry lies in the hearts of the weak","a castle will not shield against death's wail","lament the lost","ghouls lay claim on the bones of the dead","the king and the land are one","i consign you to oblivion","a dream to some, a nightmare to others","eat and dine and drink and die","casiodorus rex","we see noone","please don't think ill of us","citius altius fortius","someone in all, is nothing in one.","authority, not truth, makes law","do what you do","I love the name of honor, more than I fear death.","Retribution for those fallen","whisper through the halls of pain","sheath the sword of jealousy","make not o'er the bridge of despair","a warrior's bane, a witch's benefit"],
+    terminals: {},
+    startwords: [],
+    wordstats: {},
+    init: function() {
+        var len = this.titles.length;
+        for (var i = 0; i < len; i++)
+        {
+            var words = this.titles[i].split(' ');
+            this.terminals[words[words.length-1]] = true;
+            this.startwords.push(words[0]);
+            var wordlen = words.length;
+            for (var j = 0; j < wordlen - 1; j++)
+            {
+                if (this.wordstats.hasOwnProperty(words[j])) {
+                    this.wordstats[words[j]].push(words[j+1]);
+                } else {
+                    this.wordstats[words[j]] = [words[j+1]];
+                }
+            }
+        }
+    this.load_title();
+    },
+    choice: function (a) {
+        var i = Math.floor(a.length * Math.random());
+        return a[i];
+    },
+    make_title: function (min_length) {
+        var word = this.choice(this.startwords);
+        var title = [word];
+        while (this.wordstats.hasOwnProperty(word)) {
+            var next_words = this.wordstats[word];
+            word = this.choice(next_words);
+            title.push(word);
+            if (title.length > min_length && this.terminals.hasOwnProperty(word)) break;
+        }
+        if (title.length < min_length) return this.make_title(min_length);
+        return title.join(' ');
+    },
+    length: 1,
+    load_title: function(id) {
+        var title = this.make_title(4 + Math.floor(2 * Math.random()));
+        document.getElementById('motto').innerHTML = title;
+    }
+}
+markov.init();
+</script>
 </body>
 </html>
