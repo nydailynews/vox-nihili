@@ -128,6 +128,11 @@
 
 
 <section>
+	<h1>Game of Thrones House Motto Generator</h1>
+	<p>Create your family's crest and motto with our automatic Game of Thrones house motto generator.
+	</p>
+	<h2 id="motto"></h2>
+	<button onClick="markov.load_title()">Reload</button>
 </section>
 
 
