@@ -165,6 +165,17 @@
         </div>
     </div>
 </div>
+<style>
+section {
+	text-align: center;
+}
+h2 {
+	margin: 20px auto;
+}
+h2:first-letter {
+	text-transform: uppercase;
+}
+</style>
 <script>
 // Adapted from http://extras.denverpost.com/app/bill-tracker/bills/ , adapted from http://www.soliantconsulting.com/blog/2013/02/title-generator-using-markov-chains
 var markov = {
