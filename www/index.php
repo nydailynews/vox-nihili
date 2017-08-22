@@ -72,7 +72,7 @@
 
     <!-- ADOBE ANALYTICS -->
     <script src="//assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-c91fdc6ac624c6cbcd50250f79786de339793801.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Open%20Sans|Open+Sans+Condensed:300,700|PT+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Metamorphous|Open%20Sans|Open+Sans+Condensed:300,700|PT+Serif' rel='stylesheet' type='text/css'>
     <script data-main="http://assets.nydailynews.com/nydn/js/rh.js?r=20170405001" src="http://assets.nydailynews.com/nydn/js/require.js?r=2016LIST" defer></script>
       
     <script>
@@ -99,7 +99,7 @@
     <script src="http://interactive.nydailynews.com/js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://assets.nydailynews.com/nydn/c/rh.css">
     <link rel="stylesheet" type="text/css" href="http://assets.nydailynews.com/nydn/c/ra.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script>var nav_params = {section: 'projects', url: 'http://interactive.nydailynews.com/project/'};</script>
     <script src="http://interactive.nydailynews.com/library/vendor-nav/vendor-include.js" defer></script>
@@ -113,40 +113,25 @@
 
 <!-- CONTENT-START -->
 <main>
-    <article>
-        <div>
-    
-  <div class="ad center">
-    <span>ADVERTISEMENT</span>
-    <div id='div-gpt-ad-1423507761396-1'>
-      <script>
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-1'); });
-      </script>
-    </div>
-  </div>
-
-
-<section>
-	<h1><span>Game of Thrones</span> House Motto Generator</h1>
-	<p>You know them well. "Ours is the Fury," "Unbowed, Unbent, Unbroken," "Winter is Coming." Every noble house in Westeros has an offical family motto. Like House Targaryen's "Fire and Blood," most of the words are threats, boasts or battle cries. Other are ambiguous, like House Tyrell's "Growing Strong."</p>
-    <p>Create your own noble catchphrase with our Game of Thrones house motto generator.</p>
+<article>
+<section class="main-text">
+	<h1><span>Game of Thrones</span>House Motto<br>Generator</h1>
+	<p>You know them well. "Ours is the Fury," "Unbowed, Unbent, Unbroken," "Winter is Coming." Every noble house in Westeros has an official family motto. Like House Targaryen's "Fire and Blood," most of the words are threats, boasts or battle cries. Others are more ambiguous, like the Tyrell's "Growing Strong" or the Greyjoy's "We Do Not Sow."</p>
+    <hr noshade>
+    <p>Create your own family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient Valerian and may not make sense in the common tongue.</p>
 	<h2 id="motto"></h2>
 	<button onClick="markov.load_title()">Reload</button>
 </section>
 
-
-        </div>
-    </article>
+<div class="ad center">
+    <div id='div-gpt-ad-x105'>
+    <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-x105'); });
+    </script>
+</div>
+</article>
 </main>
 
-  <div class="ad center">
-    <span>ADVERTISEMENT</span>
-    <div id='div-gpt-ad-1423507761396-3'>
-      <script>
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-3'); });
-      </script>
-    </div>
-  </div>
 <!-- CONTENT-END -->
 
 <!-- FOOTER-START -->

@@ -13,12 +13,18 @@ li {
     display: none;
 }
 
+hr {
+    width: 90%;
+    margin: 25px auto;
+}
+
 h1 {
-    font: normal 13px 'Cinzel Decorative', cursive;
-    color: black;
+    font: normal 13px 'Metamorphous', cursive;
+    color: white;
     padding-top: 6px;
     background-image: url(../img/title-background.png);
-    height: 25px;
+    background-repeat: no-repeat;
+    height: 100px;
     width: 300px;
     margin: auto;
 }
@@ -28,8 +34,7 @@ h1 span {
 
 h2 {
     color: #aaff4d;
-    text-transform: uppercase;
-    font: normal 50px 'Press Start 2P', cursive;
+    font: normal 50px 'Metamorphous', cursive;
     text-align: center;
     margin: 40px 0 20px 0;
 }
@@ -37,7 +42,7 @@ h2 {
 h3 {
     color: white;
     text-transform: uppercase;
-    font: normal 20px 'Press Start 2P', cursive;
+    font: normal 20px 'Metamorphous', cursive;
     text-align: center;
     margin: 0;
 }
@@ -45,9 +50,9 @@ h3 {
 article {
     width: 100%;
     height: 950px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/sword-bg-low.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/winterfell.jpg);
     background-size: cover;
-    background-color: black;
+/*    background-color: black;*/
     margin: auto;
     text-align: center;
 }
@@ -59,7 +64,7 @@ article {
 }
 
 .main-text p {
-    font: normal 20px 'Open Sans', sans-serif;
+    font: normal 17px 'Open Sans', sans-serif;
     line-height: 30px;
     color: #fff;
     max-width: 77%;
@@ -116,7 +121,7 @@ button {
     height: 50px;
     background: none;
     text-transform: uppercase;
-    font: normal 16px 'Press Start 2P', cursive;
+    font: normal 16px 'Metamorphous', cursive;
     color: #aaff4d;
     margin: 10px;
     cursor: pointer;
