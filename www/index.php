@@ -202,21 +202,29 @@ var markov = {
         var i = Math.floor(a.length * Math.random());
         return a[i];
     },
-    make_title: function (min_length) {
+    make_title: function (min, max) {
         var word = this.choice(this.startwords);
         var title = [word];
         while (this.wordstats.hasOwnProperty(word)) {
             var next_words = this.wordstats[word];
             word = this.choice(next_words);
             title.push(word);
-            if (title.length > min_length && this.terminals.hasOwnProperty(word)) break;
+            if (title.length > min && this.terminals.hasOwnProperty(word)) break;
         }
-        if (title.length < min_length) return this.make_title(min_length);
+
+		// Sometimes the last word is "of." That definitely makes no sense.
+		if ( title[title.length - 1] === 'of' ) title.splice(-1, 1);
+
+        if (title.length < min) return this.make_title(min, max);
+        if (title.length > max) return this.make_title(min, max);
         return title.join(' ');
     },
     length: 1,
     load_title: function(id) {
-        var title = this.make_title(4 + Math.floor(2 * Math.random()));
+		var floor = 4;
+		var min = floor + Math.floor(2 * Math.random());
+		var max = min + Math.floor(8 * Math.random());
+        var title = this.make_title(min, max);
         document.getElementById('motto').innerHTML = title;
     }
 }
