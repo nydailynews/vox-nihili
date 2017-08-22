@@ -9,42 +9,43 @@ li {
     list-style: none
 }
 
-#rh-subnav {
+/*#rh-subnav {
     display: none;
-}
+}*/
 
 hr {
     width: 90%;
-    margin: 25px auto;
+    margin: 18px auto;
 }
 
 h1 {
-    font: normal 13px 'Metamorphous', cursive;
+    font: normal 35px 'Metamorphous', cursive;
     color: white;
-    padding-top: 6px;
     background-image: url(../img/title-background.png);
     background-repeat: no-repeat;
-    height: 100px;
     width: 300px;
-    margin: auto;
+    height: 40px;
+    margin: 25px auto;
 }
 h1 span {
     display: none;
 }
 
 h2 {
-    color: #aaff4d;
+    color: #F1EADA;
     font: normal 50px 'Metamorphous', cursive;
     text-align: center;
     margin: 40px 0 20px 0;
 }
 
-h3 {
-    color: white;
-    text-transform: uppercase;
-    font: normal 20px 'Metamorphous', cursive;
+#motto {
+    color: #F1EADA;
+    font: normal 30px 'Metamorphous', cursive;
+    line-height: 40px;
+    text-transform: capitalize;
     text-align: center;
-    margin: 0;
+    /*margin: 0;*/
+    padding-top: 60px;
 }
 
 article {
@@ -85,45 +86,35 @@ article {
 .action-box {
     display: block;
     text-align: center;
-    border: 2px dashed #b4b4b4;
-    background: #3B3C45;
     width: 600px;
     height: 400px;
-    margin: auto;
+    margin: 25px auto;
 }
 
-.weapon {
+.shield {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-#weapon .initial {
+#shield .initial {
     width: 25%;
 }
 
-#weapon-image {
-    width: 85%;
-    cursor: pointer;
-}
-
-#weapon-name {
-    font: normal 30px 'Press Start 2P', cursive;
-    line-height: 35px;
-    color: lightgray;
-    text-transform: uppercase;
-    cursor: pointer;
+#shield-image {
+    float: left;
+    margin-right: 30px;
 }
 
 button {
-    border: 1px solid #aaff4d;
-    width: 200px;
-    height: 50px;
+    border: 2px solid #F1EADA;
+    width: 150px;
+    height: 40px;
     background: none;
     text-transform: uppercase;
-    font: normal 16px 'Metamorphous', cursive;
-    color: #aaff4d;
-    margin: 10px;
+    font: normal 20px 'Metamorphous', cursive;
+    color: #F1EADA;
+    /* margin: 10px; */
     cursor: pointer;
 }
 
@@ -145,10 +136,10 @@ article p.byline {
     display: none;
 }
 
-#ra-share-top {
+/*#ra-share-top {
     padding-top: 5px;
     margin-bottom: 0;
-}
+}*/
 
 #rh-subnav {
     display: none!important;
