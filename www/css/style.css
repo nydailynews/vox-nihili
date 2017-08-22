@@ -90,16 +90,6 @@ article {
     margin: 25px auto;
 }
 
-.shield {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#shield .initial {
-    width: 25%;
-}
-
 #shield-image {
     float: left;
     margin-right: 30px;
