@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>TITLE</title>
+    <title>Game of Thrones House Motto Generator</title>
     <link rel="icon" type="image/png" href="http://interactive.nydailynews.com/favicons.png">
     <!-- DEFAULT -->
     <meta charset="utf-8" />
@@ -13,42 +13,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
     <!-- Titles -->
-    <meta property="og:title" content='TITLE' />
-    <meta name="twitter:title" content='TITLE' />
+    <meta property="og:title" content='Game of Thrones House Motto Generator' />
+    <meta name="twitter:title" content='Game of Thrones House Motto Generator' />
 
     <!-- DESCRIPTION -->
-    <meta name="description" content="DESC" />
-    <meta property="og:description" content="DESC" />
-    <meta name="twitter:description" content="DESC" />
+    <meta name="description" content="Generate a Game of Thrones-style house motto for your own noble house." />
+    <meta property="og:description" content="Generate a Game of Thrones-style house motto for your own noble house." />
+    <meta name="twitter:description" content="Generate a Game of Thrones-style house motto for your own noble house." />
 
     <!-- KEYWORD -->
-    <meta name="keywords" content="TAGS" />
-    <meta name="news_keywords" content="TAGS" />
+    <meta name="keywords" content="Game of Thrones,house motto generator,house words generator, shields" />
+    <meta name="news_keywords" content="Game of Thrones,house motto generator,house words generator, shields" />
 
     <!-- LINK -->
-    <link rel="canonical" href="CANONICAL">
-    <meta property="og:url" content="CANONICAL" />
-    <meta name="twitter:url" content="CANONICAL" />
+    <link rel="canonical" href="http://interactive.nydailynews.com/project/game-of-thrones-house/">
+    <meta property="og:url" content="http://interactive.nydailynews.com/project/game-of-thrones-house/" />
+    <meta name="twitter:url" content="http://interactive.nydailynews.com/project/game-of-thrones-house/" />
 
     <!-- THUMBNAIL IMAGE-->
-    <meta property="og:image" content="static/img/share.png" />
-    <meta name="twitter:image" content="static/img/share.png" />
-    <meta name="twitter:image:alt" content="A description of the twitter image" />
-    <meta property="og:image:width" content="1024" />
-    <meta property="og:image:height" content="512" />
+    <meta property="og:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/<?php echo $share_img; ?>.png" />
+    <meta name="twitter:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/<?php echo $share_img; ?>.png" />
+    <meta name="twitter:image:alt" content="A photo of Joffrey Lannister from Game of Thrones (when he was alive)" />
+    <meta property="og:image:width" content="<?php echo $share_width; ?>" />
+    <meta property="og:image:height" content="<?php echo $share_height; ?>" />
 
     <!-- PARSELY -->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "NewsArticle",
-            "headline": "TITLE",
-            "url": "CANONICAL",
-            "thumbnailUrl": "static/img/share.png",
-            "dateCreated": "2017-07-12T06:00:00Z",
+            "headline": "Game of Thrones House Motto Generator",
+            "url": "http://interactive.nydailynews.com/project/game-of-thrones-house/",
+            "thumbnailUrl": "http://interactive.nydailynews.com/project/game-of-thrones-house/img/share.png",
+            "dateCreated": "2017-08-04T09:00:00Z",
             "articleSection": "Interactive",
-            "creator": ["Reporter Name", "Interactive Project"],
-            "keywords": ["interactive project","interactive"]
+            "creator": ["Kelli R. Parker", "Interactive Project"],
+            "keywords": ["interactive project","interactive","game of thrones"]
         }
     </script>
 
@@ -72,8 +72,7 @@
 
     <!-- ADOBE ANALYTICS -->
     <script src="//assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-c91fdc6ac624c6cbcd50250f79786de339793801.js"></script>
-
-    <link href='https://fonts.googleapis.com/css?family=Open%20Sans|Open+Sans+Condensed:300,700|PT+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Open%20Sans|Open+Sans+Condensed:300,700|PT+Serif' rel='stylesheet' type='text/css'>
     <script data-main="http://assets.nydailynews.com/nydn/js/rh.js?r=20170405001" src="http://assets.nydailynews.com/nydn/js/require.js?r=2016LIST" defer></script>
       
     <script>
@@ -86,7 +85,7 @@
             "targetPath": document.location.pathname
         };
         var nydnDO = [ { 
-            'title':'xxxTITLExxx', 
+            'title':'xxxGame of Thrones House Motto Generatorxxx', 
             'link':'CANONICAL', 
             'p_type':'interactive', 
             'section':'interactive' 
@@ -128,9 +127,9 @@
 
 
 <section>
-	<h1>Game of Thrones House Motto Generator</h1>
-	<p>Create your family's crest and motto with our automatic Game of Thrones house motto generator.
-	</p>
+	<h1><span>Game of Thrones</span> House Motto Generator</h1>
+	<p>You know them well. "Ours is the Fury," "Unbowed, Unbent, Unbroken," "Winter is Coming." Every noble house in Westeros has an offical family motto. Like House Targaryen's "Fire and Blood," most of the words are threats, boasts or battle cries. Other are ambiguous, like House Tyrell's "Growing Strong."</p>
+    <p>Create your own noble catchphrase with our Game of Thrones house motto generator.</p>
 	<h2 id="motto"></h2>
 	<button onClick="markov.load_title()">Reload</button>
 </section>
@@ -179,7 +178,7 @@ h2:first-letter {
 <script>
 // Adapted from http://extras.denverpost.com/app/bill-tracker/bills/ , adapted from http://www.soliantconsulting.com/blog/2013/02/title-generator-using-markov-chains
 var markov = {
-    titles: ["there is no darkness without light","dragons on the mountain or else","steel over ice","the night will claim you in the end","no hope on the mountain","winter's child slays","the last word you will hear is dalgroth","for every sigil comes an oath","walk with me through the valley of shadows","give not, yield not","without sunlight no birds shall fly","a warrior's heart lies not in the dirt","stack that gold high","wither the trees of hate","the past lays its swords on the present","the sea calls for noone","winds blow through death's door","muster strength in the morning","ice before fire","crush your enemies, see them driven before you, and hear the lamentation of their women","death to the world","a sword's thrust is but half the story","life for valeria","why are they trying to kill us","brittle bones make not of kings","a queen's word makes a king's oath","ships sail high, shovels bury the dead","fire and wind come from the sky","two stand against many","flesh is stronger than steel","enough talk","look into the eyes of the dragon and despair","worry lies in the hearts of the weak","a castle will not shield against death's wail","lament the lost","ghouls lay claim on the bones of the dead","the king and the land are one","I consign you to oblivion","a dream to some, a nightmare to others","eat and dine and drink and die","by sea and by land","we see noone","please don't think ill of us","citius altius fortius","someone in all, is nothing in one.","authority, not truth, makes law","do what you do","I love the name of honor more than I fear death","retribution for those fallen","whisper through the halls of pain","sheath the sword of jealousy","make not o'er the bridge of despair","a warrior's bane, a witch's benefit","say much in few words","neither reckless nor timid","tenacity","we are the chosen","forward","from beneath","woe to the conquered","change or turn around","live pondering death","the debt will be paid","eggs today are better than chickens tomorrow","laziness is a wicked temptress","even one hair has a shadow","hunger sweetens the beans","shadow passes, light remains","carpe noctem","here we are","an empire within an empire","vox nihili","remember to live","remain unvanquished","by skill and valor","for honor","deeds, not words","the void awaits","the breath of night","sleep, eat, fight","bereft on the peaks of valor","divine are the angels of light","cuppeth","the brave fear not the dead","bringer of valor sways with the wary","slay the solemn ghost","wield and work","do not think ill of"],
+    titles: ["there is no darkness without light","dragons on the mountain or else","steel over ice","the night will claim you in the end","no hope on the mountain","winter's child slays","the last word you will hear is dalgroth","for every sigil comes an oath","walk with me through the valley of shadows","give not, yield not","without sunlight no birds shall fly","a warrior's heart lies not in the dirt","stack that gold high","wither the trees of hate","the past lays its swords on the present","the sea calls for noone","winds blow through death's door","muster strength in the morning","ice before fire","crush your enemies, see them driven before you, and hear the lamentation of their women","death to the world","a sword's thrust is but half the story","life for valeria","why are they trying to kill us","brittle bones make not of kings","a queen's word makes a king's oath","ships sail high, shovels bury the dead","fire and wind come from the sky","two stand against many","flesh is stronger than steel","enough talk","look into the eyes of the dragon and despair","worry lies in the hearts of the weak","a castle will not shield against death's wail","lament the lost","ghouls lay claim on the bones of the dead","the king and the land are one","I consign you to oblivion","a dream to some, a nightmare to others","eat and dine and drink and die","by sea and by land","we see noone","please don't think ill of us","citius altius fortius","someone in all, is nothing in one.","authority, not truth, makes law","do what you do","I love the name of honor more than I fear death","retribution for those fallen","whisper through the halls of pain","sheath the sword of jealousy","make not o'er the bridge of despair","a warrior's bane, a witch's benefit","say much in few words","neither reckless nor timid","tenacity","we are the chosen","forward","from beneath","woe to the conquered","change or turn around","live pondering death","the debt will be paid","eggs today are better than chickens tomorrow","laziness is a wicked temptress","even one hair has a shadow","hunger sweetens the beans","shadow passes, light remains","carpe noctem","here we are","an empire within an empire","vox nihili","remember to live","remain unvanquished","by skill and valor","for honor","deeds, not words","the void awaits","the breath of night","sleep, eat, fight","bereft on the peaks of valor","divine are the angels of light","cuppeth","the brave fear not the dead","bringer of valor sways with the wary","slay the solemn ghost","wield and work","do not think ill of","this is an outrage"],
     terminals: {},
     startwords: [],
     wordstats: {},
