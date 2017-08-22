@@ -124,7 +124,7 @@
                 <li class="ra-share-e"> <a href="mailto:?subject=Game of Thrones house motto generator&body=http://interactive.nydailynews.com/project/game-of-thrones-house/">email</a> </li>
     </ul>
 
-	<p>You know them well. “Ours is the Fury,” “Unbowed, Unbent, Unbroken,” “Winter is Coming.” Every noble house in Westeros has an official family motto. Like House Targaryen's "Fire and Blood," most of the words are threats, boasts or battle cries. Others are more ambiguous, like the Tyrell's "Growing Strong" or the Greyjoy's "We Do Not Sow."</p>
+	<p>“Ours is the Fury,” “Unbowed, Unbent, Unbroken,” “Winter is Coming.” Every noble house in Westeros has an official family motto. Like House Targaryen's “Fire and Blood,” most of the words are threats, boasts or battle cries. Others are more ambiguous, like the Tyrell's “Growing Strong” or the Greyjoy's “We Do Not Sow.”</p>
     <p>Create your own family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient Valerian and may not make sense in the common tongue.</p>
 
     <div class="action-box">
