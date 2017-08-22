@@ -199,6 +199,10 @@ var markov = {
             title.push(word);
             if (title.length > min_length && this.terminals.hasOwnProperty(word)) break;
         }
+
+		// Sometimes the last word is "of." That definitely makes no sense.
+		if ( title[title.length - 1] === 'of' ) title.splice(-1, 1);
+
         if (title.length < min_length) return this.make_title(min_length);
         return title.join(' ');
     },
