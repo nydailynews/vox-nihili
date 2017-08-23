@@ -38,22 +38,9 @@ h2 {
     margin: 40px 0 20px 0;
 }
 
-#motto {
-    color: #F1EADA;
-    font: normal 30px 'Metamorphous', cursive;
-    line-height: 50px;
-    text-transform: capitalize;
-    text-align: center;
-    /*margin: 0;*/
-    /*padding-top: 60px;*/
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 article {
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../img/winterfell.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(../img/winterfell.jpg);
     background-size: cover;
 /*  background-color: black;*/
     margin: auto;
@@ -70,7 +57,7 @@ article {
     font: normal 17px 'Open Sans', sans-serif;
     line-height: 30px;
     color: #fff;
-    max-width: 77%;
+    max-width: 75%;
     margin: auto;
 }
 
@@ -93,18 +80,51 @@ article {
     margin: 25px auto;
 }
 
+input {
+    text-align: center;
+    border: 2px solid #F1EADA;
+    background: none;
+    text-transform: uppercase;
+    font: normal 20px 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    color: #F1EADA;
+    padding: 10px;
+}
+
+input::placeholder {
+    color: #fff;
+    text-transform: lowercase;
+    font-size: 15px;
+}
+
+input:focus::-webkit-input-placeholder  {color:transparent;}
+input:focus::-moz-placeholder   {color:transparent;}
+input:-moz-placeholder   {color:transparent;}
+
 #shield-image {
     float: left;
     margin-right: 30px;
 }
 
+#motto {
+    color: #F1EADA;
+    font: normal 30px 'Metamorphous', cursive;
+    line-height: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    /*margin: 0;*/
+    /*padding-top: 60px;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 button {
     border: 2px solid #F1EADA;
-    width: 150px;
-    height: 40px;
+    padding: 10px;
     background: none;
     text-transform: uppercase;
-    font: normal 20px 'Metamorphous', cursive;
+    font: normal 20px 'Open Sans', sans-serif;
     color: #F1EADA;
     /* margin: 10px; */
     cursor: pointer;
