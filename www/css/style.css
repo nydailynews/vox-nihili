@@ -87,17 +87,18 @@ article {
 }
 
 input {
+    margin-top: 30px;
     text-align: center;
-    border-bottom: 2px solid #F1EADA;
+    background: none;
+    border-bottom: 2px dotted #F1EADA;
     text-transform: uppercase;
     font: normal 20px 'Open Sans', sans-serif;
     letter-spacing: 1px;
-    color: #42210B;
-    padding: 10px;
+    color: #F1EADA;
 }
 
 input::placeholder {
-    color: #42210B;
+    color: white;
     text-transform: lowercase;
     font-size: 15px;
 }
