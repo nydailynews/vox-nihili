@@ -41,11 +41,14 @@ h2 {
 #motto {
     color: #F1EADA;
     font: normal 30px 'Metamorphous', cursive;
-    line-height: 40px;
+    line-height: 50px;
     text-transform: capitalize;
     text-align: center;
     /*margin: 0;*/
-    padding-top: 60px;
+    /*padding-top: 60px;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 article {

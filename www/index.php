@@ -128,6 +128,7 @@
     <p>Create your own family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient High Valerian and may not make sense in the common tongue.</p>
 
     <div class="action-box">
+        <div class="name-box">Enter your house name</div>
         <img id="shield-image" src="img/shield-start.png" alt="an image of a shield with Latin on it">
         <h3 id="motto"></h3>
     </div>
