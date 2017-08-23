@@ -130,12 +130,13 @@
 
     <hr>
 
-    <input placeholder="Enter your house name" id="house-name" type="text">
+    <input placeholder="Enter your house name" id="house" type="text">
 
     <div class="action-box">
         <img id="shield-image" src="img/shield-start.png" alt="an image of a shield with Latin on it">
 
         <h3 id="motto"></h3>
+        <h4 id="house-name">&diams; House Smirti &diams;</h4>
     </div>
 
 	<button onClick="markov.load_title()">Reload</button>
