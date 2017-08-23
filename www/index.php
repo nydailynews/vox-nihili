@@ -121,7 +121,7 @@
 
     <ul class="ra-share" id="ra-share-top">
         <li class="rt-share-f"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://interactive.nydailynews.com/project/game-of-thrones-house/">facebook</a> </li>
-        <li class="ra-share-t"> <a target="_blank" href="https://twitter.com/intent/tweet?text=Make your own sword name with our Game of Thrones sword name generator&url=http://nydn.us/house&related=nydni,kelliparker">Tweet</a></li>
+        <li class="ra-share-t"> <a target="_blank" href="https://twitter.com/intent/tweet?text=Make your own house motto with our Game of Thrones house motto generator&url=http://nydn.us/house&related=nydni,kelliparker">Tweet</a></li>
         <li class="ra-share-e"> <a href="mailto:?subject=Game of Thrones house motto generator&body=http://interactive.nydailynews.com/project/game-of-thrones-house/">email</a> </li>
     </ul>
 
@@ -130,15 +130,16 @@
 
     <input placeholder="Enter your house name" id="house" type="text">
 
-    <div class="action-box">
+    <div class="action-box" id="card">
         <img id="shield-image" src="img/shield-start.png" alt="an image of a shield with Latin on it">
 
         <h3 id="motto"></h3>
         <h4 id="house-name"></h4>
+		<p id="url" class="hide">http://nydn.us/mottos</p>
     </div>
 
 	<button onClick="markov.load_title();" id="generate">Make a Motto</button>
-	<button onClick="save_image();" id="save">Save an Image</button>
+	<button onClick="save_motto();" id="save">Save This Motto</button>
 </section>
 
 <div class="ad center">
@@ -171,6 +172,7 @@
         <div id="div-gpt-ad-x100"></div>
     </div>
 </div>
+<script src="http://interactive.nydailynews.com/js/html2canvas/0.4.1/html2canvas.js"></script>
 
 </body>
 </html>

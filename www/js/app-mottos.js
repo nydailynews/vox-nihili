@@ -84,7 +84,7 @@ function save_motto() {
 
 function save_image()
 {
-    html2canvas($('#motto'), {
+    html2canvas($('#card'), {
         allowTaint: true,
         onrendered: function(canvas) {
 
@@ -93,9 +93,9 @@ function save_image()
             window.oCanvas = window.oCanvas[0];
             var strDataURI = window.oCanvas.toDataURL();
 
-            var filename = convert_to_slug($('#motto-words').text());
+            var filename = convert_to_slug($('#motto').text());
 
-            var a = $("<a>").attr("href", strDataURI).attr("download", "shield-" + filename + ".png").appendTo("body");
+            var a = $("<a>").attr("href", strDataURI).attr("download", "motto-" + filename + ".png").appendTo("body");
             a[0].click();
             a.remove();
 
