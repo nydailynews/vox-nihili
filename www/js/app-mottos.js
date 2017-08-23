@@ -21,7 +21,6 @@ var markov = {
                 }
             }
         }
-        this.load_title();
     },
     choice: function (a) {
         var i = Math.floor(a.length * Math.random());
@@ -61,7 +60,7 @@ var full = {
     init: function () {},
     pick: function() {
         var i = Math.floor(this.titles.length * Math.random());
-        this.load_titles(this.titles[i]);
+        this.load_title(this.titles[i]);
         // Make sure the same title isn't loaded more than once
         this.titles.splice(i, 1);
     },
@@ -108,16 +107,6 @@ function save_image()
     });
 }
 
-function names(data, search_field) {
-    var bucket = []
-    for (var i = 0; i < data.length; i++) {        
-        if (data[i][search_field] === 1) {
-            bucket.push(data[i]['name']);
-        }
-    }
-    return bucket;
-}
-
 function random(list) {
     var i = Math.floor(Math.random() * list.length);
     return list[i];
@@ -126,7 +115,7 @@ function random(list) {
 function share_motto() {
     // PERMALINK
     // Edit the URL to make the image permalinkable
-    var motto_words = $('#motto-words').text();
+    var motto_words = $('#motto').text();
     var motto_id = $('#motto-image').attr('src').replace('img/shield-','').replace('.png','');
     var slug = convert_to_slug(motto_words);
     document.location.hash = '#' + slug + '_' + blade_id;
@@ -143,7 +132,7 @@ function share_motto() {
 }
 function load_motto(hash, data) {
     // PERMALINK
-    // When a permalink is loaded, return the blade
+    // When a permalink is loaded, return the item
     window.history.replaceState('', '', document.location.origin + document.location.pathname);
     var pieces = hash.substr(1).split('_');
     var names = pieces[0].split('-');
@@ -167,9 +156,9 @@ function load_motto(hash, data) {
     }
     if ( has_name === 0 ) suffix = names(data, 'suffix');
     
-    var new_name = prefix + ' ' + suffix;
-    $('#motto-image').attr('alt',new_name);
-    $('#motto-words').text(new_name);
+    var new_name = full.pick();
+    $('#motto-image').attr('alt', new_name);
+    $('#motto').text(new_name);
     }
 
 var count = 0;
@@ -178,52 +167,45 @@ var ad_id = 'div-gpt-ad-1423507761396-';
 function generate_motto() {
     if ( count == 0 ) {
         $('#motto-image').removeClass('initial');
-        document.getElementById("save-motto").disabled = false;
-        document.getElementById("share-motto").disabled = false;
+        //document.getElementById("save-motto").disabled = false;
+        //document.getElementById("share-motto").disabled = false;
     } 
     count += 1;
 
     // AD REFRESH AND SUCH
     if ( count % 10 == 0 ) {
-        $('#motto-image').addClass('hide');
+        $('#motto-image, #house-name, #motto').addClass('hide');
         $('#ad' + ad).removeClass('hide');
-        $('#motto-words').text('ad');
+        $('#motto').text('ad');
         return true;
     }
     if ( count > 1 && count % 10 == 1 ) {
         $('#ad' + ad).addClass('hide');
-        $('#motto-image').removeClass('hide');
+        $('#motto-image, #house-name, #motto').removeClass('hide');
         ad += 1;
         if ( ad > 3 ) ad = 1;
         // AD REFRESH
         if ( count % 30 == 1 ) googletag.pubads().refresh();
     }
-    if ( count % 10 == 0 ) {
+    if ( count % 5 == 0 ) {
         PARSELY.beacon.trackPageView({
             url: document.location.href,
             urlref: document.location.href,
             js: 1
         });
-        src = '//assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-c91fdc6ac624c6cbcd50250f79786de339793801.js'
-        var s = document.createElement('script');
-        s.setAttribute('src', src);
-        //document.getElementsByTagName('head')[0].appendChild(s);
     }
 
     var motto_id = Math.floor(Math.random() * 26);
     var motto_img = 'img/shield-' + motto_id + '.png';
-    var new_name = random(prefix)+' '+random(suffix);
+    var new_name = full.pick();
     $('#motto-image').attr('src', motto_img);
     $('#motto-image').attr('alt',new_name);
     window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + convert_to_slug(new_name) + '_' + motto_id);
-    $('#motto-words').text(new_name);
+    $('#motto').text(new_name);
 }
 
-$.getJSON('data.json', function(name_data) {
-    prefix = names(name_data, 'prefix');
-    suffix = names(name_data, 'suffix');
     hsh = document.location.hash.substr(1);
-    $('#motto-image, #motto-words').click(function() { generate_motto(); });
+    $('#motto-image, #motto').click(function() { generate_motto(); });
 
     // In case we're back here via save button
     if ( document.referrer == document.location.href ) $('#generate-name').trigger('click');
@@ -232,20 +214,7 @@ $.getJSON('data.json', function(name_data) {
     if ( document.location.hash !== '' ) load_motto(document.location.hash, name_data);
     if ( document.location.search !== '' ) load_motto(document.location.search.replace('motto=',''), name_data);
 
-});
-
-function play_audio() {
-    var music = document.getElementById('player');
-    //music.setAttribute('autoplay', 'autoplay');
-    music.src = 'http://audio-download.ngfiles.com/476000/476918_Game-of-Thrones-8-bit.mp3';
-    music.type = 'audio/mpeg';
-    $('#player').removeClass('hide');
-    $('#audio button').remove();
-    music.load();
-    music.play();
-}
-
 // PRELOAD IMAGES
-for ( var i = 0; i <= 16; i ++ ) {
+for ( var i = 0; i <= 25; i ++ ) {
     $('<img/>')[0].src = 'img/shield-' + i + '.png';
 }

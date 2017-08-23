@@ -131,14 +131,35 @@
     <input placeholder="Enter your house name" id="house" type="text">
 
     <div class="action-box" id="card">
-        <img id="shield-image" src="img/shield-start.png" alt="an image of a shield with Latin on it">
+        <img id="motto-image" src="img/shield-start.png" alt="an image of a shield with Latin on it">
+		<div class="ad center hide" id="ad1">
+			<div id='div-gpt-ad-1423507761396-1'>
+				<script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-1'); });
+				</script>
+			</div>
+		</div>
+		<div class="ad center hide" id="ad2">
+			<div id='div-gpt-ad-1423507761396-2'>
+				<script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-2'); });
+				</script>
+			</div>
+		</div>
+		<div class="ad center hide" id="ad3">
+			<div id='div-gpt-ad-1423507761396-3'>
+				<script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-3'); });
+				</script>
+			</div>
+		</div>
 
         <h3 id="motto"></h3>
         <h4 id="house-name"></h4>
 		<p id="url" class="hide">http://nydn.us/mottos</p>
     </div>
 
-	<button onClick="markov.load_title();" id="generate">Make a Motto</button>
+	<button onClick="generate_motto();" id="generate-name">Make a Motto</button>
 	<button onClick="save_motto();" id="save">Save This Motto</button>
 </section>
 

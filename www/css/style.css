@@ -107,7 +107,7 @@ input:focus::-webkit-input-placeholder  {color:transparent;}
 input:focus::-moz-placeholder   {color:transparent;}
 input:-moz-placeholder   {color:transparent;}
 
-#shield-image {
+#motto-image {
     float: left;
     margin-right: 30px;
 }
