@@ -134,6 +134,11 @@ h4 {
     top: 40%;
     transform: translateY(-50%);
 }
+#house-name:before,
+#house-name:after {
+    /* per http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/ */
+    content: "\2666";
+}
 
 button {
     border: 2px solid #F1EADA;

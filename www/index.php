@@ -100,7 +100,7 @@
     <link rel="stylesheet" type="text/css" href="http://assets.nydailynews.com/nydn/c/rh.css">
     <link rel="stylesheet" type="text/css" href="http://assets.nydailynews.com/nydn/c/ra.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/mottos.js"></script>
+    <script src="js/app-mottos.js"></script>
 
     <script>var nav_params = {section: 'projects', url: 'http://interactive.nydailynews.com/project/'};</script>
     <script src="http://interactive.nydailynews.com/library/vendor-nav/vendor-include.js" defer></script>
@@ -134,10 +134,11 @@
         <img id="shield-image" src="img/shield-start.png" alt="an image of a shield with Latin on it">
 
         <h3 id="motto"></h3>
-        <h4 id="house-name">&diams; House Smirti &diams;</h4>
+        <h4 id="house-name"></h4>
     </div>
 
-	<button onClick="markov.load_title()">Reload</button>
+	<a href="javascript:markov.load_title();"><button id="generate">Make a Motto</button></a>
+	<a href="javascript:save_image();"><button id="save">Save an Image</button></a>
 </section>
 
 <div class="ad center">
