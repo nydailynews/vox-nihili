@@ -137,17 +137,8 @@
         <h4 id="house-name"></h4>
     </div>
 
-	<a href="javascript:markov.load_title();"><button id="generate">Make a Motto</button></a>
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	<a href="javascript:save_image();"><button id="save">Save an Image</button></a>
+	<button onClick="markov.load_title();" id="generate">Make a Motto</button>
+	<button onClick="save_image();" id="save">Save an Image</button>
 </section>
 
 <div class="ad center">

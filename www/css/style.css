@@ -150,6 +150,9 @@ button {
     color: #42210B;
     cursor: pointer;
 }
+button + button {
+    margin-left: 50px;
+}
 
 button:disabled, button[disabled] {
   border: 1px solid #999999;
