@@ -21,7 +21,7 @@ var markov = {
                 }
             }
         }
-    this.load_title();
+        this.load_title();
     },
     choice: function (a) {
         var i = Math.floor(a.length * Math.random());
@@ -51,11 +51,24 @@ var markov = {
         var max = min + Math.floor(8 * Math.random());
         var title = this.make_title(min, max);
         document.getElementById('motto').innerHTML = title;
-    }
+    },
 }
 markov.init();
 
-
+// Instead of markov-chaining a title together, just pick a random one from the list.
+var full = {
+    titles: markov.titles,
+    init: function () {},
+    pick: function() {
+        var i = Math.floor(this.titles.length * Math.random());
+        this.load_titles(this.titles[i]);
+        // Make sure the same title isn't loaded more than once
+        this.titles.splice(i, 1);
+    },
+    load_title: function(title) {
+        document.getElementById('motto').innerHTML = title;
+    }
+};
 
 function convert_to_slug(text) {
     return text
