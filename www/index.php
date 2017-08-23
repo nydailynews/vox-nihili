@@ -138,6 +138,15 @@
     </div>
 
 	<a href="javascript:markov.load_title();"><button id="generate">Make a Motto</button></a>
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
 	<a href="javascript:save_image();"><button id="save">Save an Image</button></a>
 </section>
 
