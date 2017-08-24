@@ -116,13 +116,13 @@ function share_motto() {
     // PERMALINK
     // Edit the URL to make the image permalinkable
     var motto_words = $('#motto').text();
-    var motto_id = $('#motto-image').attr('src').replace('img/shield-','').replace('.png','');
+    var shield_id = $('#motto-image').attr('src').replace('img/shield-','').replace('.png','');
     var slug = convert_to_slug(motto_words);
-    document.location.hash = '#' + slug + '_' + blade_id;
-    var url = document.location.href.replace('#','?sword=');
-    var tweet_text = "My house's words are " + motto_words + " thanks to the #GoT house motto generator:";
+    document.location.hash = '#' + slug + '_' + shield_id;
+    var url = document.location.href.replace('#','?motto=');
+    var tweet_text = "My #GoT house motto: " + motto_words;
     var markup = "<h3>Share your house words</h3>\n\
-<a class=\"twitter-share\" href='http://twitter.com/share?url=" + url + "&text=" + tweet_text + "&via=nydailynews' target='_blank'>\n\
+<a class=\"twitter-share\" href='http://twitter.com/share?url=" + url + "&text=" + tweet_text + "&via=nydni' target='_blank'>\n\
 <button class='share social_icon_box twitter_button'>Share On Twitter</button></a>&nbsp;\n\
 <a class=\"fb-share\" href='http://www.facebook.com/sharer.php?u=" + url + "' target='_blank'>\n\
 <button class='share social_icon_box facebook_button'>Share On Facebook</button></a>\n\
@@ -135,31 +135,15 @@ function load_motto(hash, data) {
     // When a permalink is loaded, return the item
     window.history.replaceState('', '', document.location.origin + document.location.pathname);
     var pieces = hash.substr(1).split('_');
-    var names = pieces[0].split('-');
-    var motto_id = pieces[1];
+    var motto_id = pieces[0].split('-');
+    var shield_id = pieces[1];
     $('#motto-image').removeClass('initial');
-    $('#motto-image').attr('src','img/shield-'+ motto_id + '.png');
+    $('#motto-image').attr('src','img/shield-'+ shield_id + '.png');
 
-    // Make sure the name is in our list of names
-    var len = data.length;
-    var has_name = 0;
-    var prefix = names[0];
-    for (var i = 0; i < len; i++) {        
-        if ( data[i]['name'] === prefix ) has_name = 1;
-    }
-    if ( has_name === 0 ) prefix = names(data, 'prefix');
-
-    has_name = 0;
-    var suffix = names.slice(1).join(' ');
-    for (var i = 0; i < len; i++) {        
-        if ( data[i]['name'] === suffix ) has_name = 1;
-    }
-    if ( has_name === 0 ) suffix = names(data, 'suffix');
-    
-    var new_name = full.pick();
+    var new_name = full.titles[motto_id];
     $('#motto-image').attr('alt', new_name);
     $('#motto').text(new_name);
-    }
+}
 
 var count = 0;
 var ad = 1;
