@@ -114,6 +114,15 @@ input:-moz-placeholder   {color:transparent;}
 
 .black {
     background-color: black;
+    padding: 15px;
+}
+.black #motto, .black #house-name, .black #motto:first-letter {
+    text-transform: unset;
+}
+.black #house-name:before,
+.black #house-name:after {
+    content: "";
+    padding: 0;
 }
 
 #motto-image {
