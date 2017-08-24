@@ -1,6 +1,6 @@
 // Adapted from http://extras.denverpost.com/app/bill-tracker/bills/ , adapted from http://www.soliantconsulting.com/blog/2013/02/title-generator-using-markov-chains
 var markov = {
-    titles: ["there is no darkness without light","dragons on the mountain","steel over ice","the night lays claims","no hope on the mountain","winter's child slays","the last word is dalgroth","for every sigil comes an oath","walk with me through the valley of shadows","give not, yield not","without sunlight no birds shall fly","a warrior's heart lies not in the dirt","stack that gold high","wither the trees of hate","the past lays its swords on the present","the sea calls for noone","winds blow through death's door","muster strength in the morning","ice before fire","crush your enemies, see them driven before you","death to the world","a sword's thrust is but half the story","life for valeria","why are they trying to kill us","brittle bones make not of kings","a queen's word makes a king's oath","ships sail high, shovels bury the dead","fire and wind come from the sky","two stand against many","flesh is stronger than steel","enough talk","look into the eyes of the dragon and despair","worry lies in the hearts of the weak","a castle will not shield against death's wail","lament the lost","ghouls lay claim on the bones of the dead","the king and the land are one","I consign you to oblivion","a dream to some, a nightmare to others","eat and dine and drink and die","by sea and by land","we see noone","please don't think ill of us","citius altius fortius","someone in all, is nothing in one","authority, not truth, makes law","do what you do","I love the name of honor more than I fear death","retribution for those fallen","whisper through the halls of pain","sheath the sword of jealousy","make not o'er the bridge of despair","a warrior's bane, a witch's benefit","say much in few words","neither reckless nor timid","we are the chosen","forward from beneath","woe to the conquered","change or turn around","live pondering death","the debt will be paid","laziness is a wicked temptress","even one hair has a shadow","hunger sweetens the beans","shadow passes, light remains","carpe noctem","here we are","an empire within an empire","vox nihili","remember to live","remain unvanquished","by skill and valor","for honor","deeds, not words","the void awaits","the breath of night","sleep, eat, fight","bereft on the peaks of valor","divine are the angels of light","the brave fear not the dead","bringer of valor sways with the wary","slay the solemn ghost","wield and work","this is an outrage"],
+    titles: ["there is no darkness without light","dragons on the mountain","steel over ice","the night lays claims","no hope on the mountain","winter's child slays","the last word is dalgroth","for every sigil comes an oath","walk with me through the valley of shadows","give not, yield not","without sunlight no birds shall fly","a warrior's heart lies not in the dirt","stack that gold high","wither the trees of hate","the past lays its swords on the present","the sea calls for noone","winds blow through death's door","muster strength in the morning","ice before fire","crush your enemies, see them driven before you","death to the world","a sword's thrust is but half the story","life for valeria","why are they trying to kill us","brittle bones make not of kings","a queen's word makes a king's oath","ships sail high, shovels bury the dead","fire and wind come from the sky","two stand against many","flesh is stronger than steel","enough talk","look into the eyes of the dragon and despair","worry lies in the hearts of the weak","a castle will not shield against death's wail","lament the lost","ghouls lay claim on the bones of the dead","the king and the land are one","I consign you to oblivion","a dream to some, a nightmare to more","eat and dine and drink and die","by sea and by land","we see noone","please don't think ill of us","citius altius fortius","someone in all, is nothing in one","authority, not truth, makes law","do what you do","I love the name of honor more than I fear death","retribution for those fallen","whisper through the halls of pain","sheath the sword of jealousy","make not o'er the bridge of despair","a warrior's bane, a witch's benefit","say much in few words","neither reckless nor timid","we are the chosen","forward from beneath","woe to the conquered","change or turn around","live pondering death","the debt will be paid","laziness is a wicked temptress","even one hair has a shadow","hunger sweetens the beans","shadow passes, light remains","carpe noctem","here we are","an empire within an empire","vox nihili","remember to live","by skill and valor","for honor","deeds, not words","the void awaits","the breath of night","sleep, eat, fight","bereft on the peaks of valor","divine are the angels of light","the brave fear not the dead","bringer of valor sways with the wary","slay the solemn ghost","wield and work","this is an outrage"],
     terminals: {},
     startwords: [],
     wordstats: {},
@@ -72,6 +72,12 @@ var full = {
 function convert_to_id(text) {
     return markov.titles.indexOf(text);
 }
+function convert_to_slug(text) {
+    return text
+        .toLowerCase()
+        .replace(/[^\w ]+/g,'')
+        .replace(/ +/g,'-');
+}
 
 function save_motto() {
     $('#url').removeClass('hide');
@@ -90,7 +96,7 @@ function save_image()
             window.oCanvas = window.oCanvas[0];
             var strDataURI = window.oCanvas.toDataURL();
 
-            var filename = convert_to_id($('#motto').text());
+            var filename = convert_to_slug($('#motto').text());
 
             var a = $("<a>").attr("href", strDataURI).attr("download", "motto-" + filename + ".png").appendTo("body");
             a[0].click();
@@ -124,7 +130,7 @@ function share_it() {
     $('#motto-share').html(markup);
 
 }
-function load_motto(hash, data) {
+function load_motto(hash) {
     // PERMALINK
     // When a permalink is loaded, return the item
     window.history.replaceState('', '', document.location.origin + document.location.pathname);
@@ -148,7 +154,12 @@ function generate_motto() {
     if ( house_input !== '' ) {
         house = 'House ' + house_input;
         document.getElementById('house-name').textContent = house;
+        $('#house-name').removeClass('hide');
     }
+    else {
+        $('#house-name').addClass('hide');
+    }
+
     if ( count == 0 ) {
         $('#motto-image').removeClass('initial');
         //document.getElementById("save-motto").disabled = false;
@@ -195,8 +206,8 @@ $('#motto-image, #motto').click(function() { generate_motto(); });
 if ( document.referrer == document.location.href ) $('#generate-name').trigger('click');
 
 // PERMALINK
-if ( document.location.hash !== '' ) load_motto(document.location.hash, name_data);
-if ( document.location.search !== '' ) load_motto(document.location.search.replace('motto=',''), name_data);
+if ( document.location.hash !== '' ) load_motto(document.location.hash);
+if ( document.location.search !== '' ) load_motto(document.location.search.replace('motto=',''));
 
 // PRELOAD IMAGES
 for ( var i = 0; i < 26; i ++ ) {
