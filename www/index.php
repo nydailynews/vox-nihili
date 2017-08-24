@@ -100,7 +100,7 @@
     <link rel="stylesheet" type="text/css" href="//assets.nydailynews.com/nydn/c/rh.css">
     <link rel="stylesheet" type="text/css" href="//assets.nydailynews.com/nydn/c/ra.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/app-mottos.js"></script>
+	<script src="js/app-mottos.js"></script>
 
     <script>var nav_params = {section: 'projects', url: 'http://interactive.nydailynews.com/project/'};</script>
     <script src="//interactive.nydailynews.com/library/vendor-nav/vendor-include.js" defer></script>
@@ -125,7 +125,7 @@
         <li class="ra-share-e"> <a href="mailto:?subject=Game of Thrones house motto generator&body=http://interactive.nydailynews.com/project/game-of-thrones-house/">email</a> </li>
     </ul>
 
-	<p>From the menacing “Ours is the Fury,” to the well-known “Winter is Coming,” every noble house in Westeros has an official family motto. CREATE YOUR OWN family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient High Valerian and may not make sense in the common tongue.</p>
+	<p>From the menacing “Ours is the Fury,” to the well-known “Winter is Coming,” every noble house in Westeros has an official family motto. CREATE YOUR OWN family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient High Valyrian and may not make sense in the common tongue.</p>
 
     <input placeholder="Enter your house name" id="house" type="text">
 

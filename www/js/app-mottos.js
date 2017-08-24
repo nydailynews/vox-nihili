@@ -135,18 +135,16 @@ function load_motto(hash) {
     // PERMALINK
     // When a permalink is loaded, return the item
     window.history.replaceState('', '', document.location.origin + document.location.pathname);
-    $( document ).ready(function() {
-        var pieces = hash.substr(1).split('_');
-        var motto_id = +pieces[0];
-        var shield_id = +pieces[1];
+    var pieces = hash.substr(1).split('_');
+    var motto_id = +pieces[0];
+    var shield_id = +pieces[1];
 
-        $('#motto-image').removeClass('initial');
-        $('#motto-image').attr('src','img/shield-'+ shield_id + '.png');
+    $('#motto-image').removeClass('initial');
+    $('#motto-image').attr('src','img/shield-'+ shield_id + '.png');
 
-        var new_name = markov.titles[motto_id];
-        $('#motto-image').attr('alt', new_name);
-        $('#motto').text(new_name);
-    });
+    var new_name = markov.titles[motto_id];
+    $('#motto-image').attr('alt', new_name);
+    $('#motto').text(new_name);
 }
 
 var count = 0;
@@ -208,17 +206,25 @@ function generate_motto() {
     $('#motto').text(new_name);
 }
 
-hsh = document.location.hash.substr(1);
-$('#motto-image, #motto').click(function() { generate_motto(); });
+$(document).ready(function() {
+    hsh = document.location.hash.substr(1);
+    // Load a new motto when the enter key is pressed in the house name field
+    document.querySelector('#house').addEventListener('keypress', function (e) {
+        console.log('asdfsfs');
+        var key = e.which || e.keyCode;
+        if ( 13 == key ) { generate_motto(); }
+    });
+    $('#motto-image, #motto').click(function() { generate_motto(); });
 
-// In case we're back here via save button
-if ( document.referrer == document.location.href ) $('#generate-name').trigger('click');
+    // In case we're back here via save button
+    if ( document.referrer == document.location.href ) $('#generate-name').trigger('click');
 
-// PERMALINK
-if ( document.location.hash !== '' ) load_motto(document.location.hash);
-if ( document.location.search !== '' ) load_motto(document.location.search.replace('motto=',''));
+    // PERMALINK
+    if ( document.location.hash !== '' ) load_motto(document.location.hash);
+    if ( document.location.search !== '' ) load_motto(document.location.search.replace('motto=',''));
 
-// PRELOAD IMAGES
-for ( var i = 0; i < 26; i ++ ) {
-    $('<img/>')[0].src = 'img/shield-' + i + '.png';
-}
+    // PRELOAD IMAGES
+    for ( var i = 0; i < 26; i ++ ) {
+        $('<img/>')[0].src = 'img/shield-' + i + '.png';
+    }
+});
