@@ -63,6 +63,7 @@ var full = {
         this.load_title(this.titles[i]);
         // Make sure the same title isn't loaded more than once
         this.titles.splice(i, 1);
+        return this.titles[i];
     },
     load_title: function(title) {
         document.getElementById('motto').innerHTML = title;
@@ -70,7 +71,7 @@ var full = {
 };
 
 function convert_to_id(text) {
-    return markov.titles.indexOf(text);
+    return markov.titles.indexOf(text.toLowerCase());
 }
 function convert_to_slug(text) {
     return text
@@ -149,6 +150,7 @@ var count = 0;
 var ad = 1;
 var ad_id = 'div-gpt-ad-1423507761396-';
 function generate_motto() {
+    // Handle the house-name customization
     var house = '';
     var house_input = document.getElementById('house').value.trim();
     if ( house_input !== '' ) {
@@ -183,6 +185,7 @@ function generate_motto() {
         if ( count % 30 == 1 ) googletag.pubads().refresh();
     }
     if ( count % 5 == 0 ) {
+        // Add a PV every five mottos
         PARSELY.beacon.trackPageView({
             url: document.location.href,
             urlref: document.location.href,
@@ -193,9 +196,10 @@ function generate_motto() {
     var shield_id = Math.floor(Math.random() * 26);
     var motto_img = 'img/shield-' + shield_id + '.png';
     var new_name = full.pick();
+    var motto_id = convert_to_id(new_name);
     $('#motto-image').attr('src', motto_img);
-    $('#motto-image').attr('alt',new_name);
-    window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + convert_to_id(new_name) + '_' + shield_id);
+    $('#motto-image').attr('alt', new_name);
+    window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + motto_id + '_' + shield_id);
     $('#motto').text(new_name);
 }
 
