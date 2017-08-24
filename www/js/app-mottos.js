@@ -189,11 +189,13 @@ function generate_motto() {
     }
     if ( count % 5 == 0 ) {
         // Add a PV every five mottos
-        PARSELY.beacon.trackPageView({
-            url: document.location.href,
-            urlref: document.location.href,
-            js: 1
-        });
+        if ( typeof PARSELY !== 'undefined' ) {
+            PARSELY.beacon.trackPageView({
+                url: document.location.href,
+                urlref: document.location.href,
+                js: 1
+            });
+        }
     }
 
     var shield_id = Math.floor(Math.random() * 26);
