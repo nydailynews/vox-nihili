@@ -117,7 +117,7 @@ input:-moz-placeholder   {color:transparent;}
     padding: 15px;
 }
 .black #motto, .black #house-name, .black #motto:first-letter {
-    text-transform: none;
+    text-transform: unset;
 }
 .black #house-name:before,
 .black #house-name:after {

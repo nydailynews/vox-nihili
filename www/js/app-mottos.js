@@ -89,7 +89,7 @@ function save_motto() {
 function save_image()
 {
     html2canvas($('#card'), {
-        allowTaint: true,
+        allowTaint: false,
         background: '#000',
         letterRendering: true,
         onrendered: function(canvas) {

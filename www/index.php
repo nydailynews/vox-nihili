@@ -162,7 +162,9 @@
     </div>
 
 	<button onClick="generate_motto();" id="generate-name">Make a Motto</button>
+<!--
 	<button onClick="save_motto();" id="save">Save This Motto</button>
+-->
 </section>
     <p class="byline">Interactive by Joe Murphy and Kelli R. Parker</p>
 
