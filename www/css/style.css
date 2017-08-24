@@ -26,11 +26,11 @@ hr {
 }
 
 h1 {
-    font: normal 35px 'Metamorphous', cursive;
-    color: white;
+    font: normal 30px 'Metamorphous', cursive;
+    color: black;
     background-image: url(../img/title-background.png);
     background-repeat: no-repeat;
-    width: 300px;
+    width: 250px;
     height: 40px;
     margin: auto;
 }
@@ -66,6 +66,7 @@ article {
     color: #fff;
     max-width: 75%;
     margin: auto;
+    text-align: left;
 }
 
 .main-text a {
@@ -89,13 +90,16 @@ article {
 
 input {
     margin-top: 30px;
+    padding: 10px;
+    width: 300px;
     text-align: center;
-    background: none;
-    border-bottom: 2px dotted #F1EADA;
+    background-color: rgba(232,214,193,0.5);
+    border: 2px dotted #F1EADA;
+    border-radius: 5px;
     text-transform: uppercase;
     font: normal 20px 'Open Sans', sans-serif;
     letter-spacing: 1px;
-    color: #F1EADA;
+    color: white;
 }
 
 input::placeholder {
@@ -148,11 +152,11 @@ h4 {
 button {
     border: 2px solid #F1EADA;
     padding: 10px;
-    background: #E8D6C1;
-    border-radius: 10px;
+    background-color: rgba(232,214,193,0.5);
+    border-radius: 5px;
     text-transform: uppercase;
-    font: normal 20px 'Open Sans', sans-serif;
-    color: #42210B;
+    font: normal 15px 'Open Sans', sans-serif;
+    color: white;
     cursor: pointer;
 }
 button + button {
@@ -171,8 +175,10 @@ button:disabled, button[disabled] {
 }
 article p.byline {
     color: white;
-    font-size: 11px;
+    font-size: 12px;
+    margin-bottom: 30px;
 }
+
 .hide {
     display: none;
 }
@@ -190,30 +196,57 @@ article p.byline {
 @media only screen and ( min-width: 220px ) and ( max-width:727px ) {
 
     .main-text {
-        padding: 25px;
+        padding: 15px;
     }
     .main-text p {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 22px;
         max-width: 95%;
     }
     .action-box {
         width: 95%;
-        height: 250px;
     }
     article {
         width: 100%;
         height: auto;
     }
     h2 {
-        font-size: 30px;
+        font-size: 35px;
         margin-top: 25px;
+    }
+    input {
+        width: 100%;
     }
     .button-box {
         margin-top: -20px;
     }
-    #weapon-name {
-        font-size: 20px;
+    #motto-image {
+        float: none;
+        width: 90%;
+        margin: 0;
+    }
+    #motto {
+        font-size: 24px;
+        line-height: 34px;
+        position: unset;
+        top: unset;
+        transform: none;
+    }
+    h4 {
+        font-size: 14px;
+        position: unset;
+        top: unset;
+        transform: none;
+    }
+    button {
+        margin-top: 17px;
+    }
+    button + button {
+        display: none;
+    }
+
+    .ad {
+        height: 250px;
     }
 }
 /* TABLET-SPECIFIC */
