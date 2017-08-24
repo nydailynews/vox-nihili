@@ -60,10 +60,11 @@ var full = {
     init: function () {},
     pick: function() {
         var i = Math.floor(this.titles.length * Math.random());
-        this.load_title(this.titles[i]);
+        var t = this.titles[i];
+        this.load_title(t);
         // Make sure the same title isn't loaded more than once
         this.titles.splice(i, 1);
-        return this.titles[i];
+        return t;
     },
     load_title: function(title) {
         document.getElementById('motto').innerHTML = title;
