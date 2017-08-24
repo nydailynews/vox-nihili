@@ -75,6 +75,7 @@ function convert_to_id(text) {
 
 function save_motto() {
     $('#url').removeClass('hide');
+    $('#card').addClass('black');
     save_image();
 }
 
@@ -100,6 +101,7 @@ function save_image()
             window.location.reload(true);
 
             $('#url').addClass('hide');
+            $('#card').removeClass('black');
         }
     });
 }
@@ -186,17 +188,17 @@ function generate_motto() {
     $('#motto').text(new_name);
 }
 
-    hsh = document.location.hash.substr(1);
-    $('#motto-image, #motto').click(function() { generate_motto(); });
+hsh = document.location.hash.substr(1);
+$('#motto-image, #motto').click(function() { generate_motto(); });
 
-    // In case we're back here via save button
-    if ( document.referrer == document.location.href ) $('#generate-name').trigger('click');
+// In case we're back here via save button
+if ( document.referrer == document.location.href ) $('#generate-name').trigger('click');
 
-    // PERMALINK
-    if ( document.location.hash !== '' ) load_motto(document.location.hash, name_data);
-    if ( document.location.search !== '' ) load_motto(document.location.search.replace('motto=',''), name_data);
+// PERMALINK
+if ( document.location.hash !== '' ) load_motto(document.location.hash, name_data);
+if ( document.location.search !== '' ) load_motto(document.location.search.replace('motto=',''), name_data);
 
 // PRELOAD IMAGES
-for ( var i = 0; i <= 25; i ++ ) {
+for ( var i = 0; i < 26; i ++ ) {
     $('<img/>')[0].src = 'img/shield-' + i + '.png';
 }
