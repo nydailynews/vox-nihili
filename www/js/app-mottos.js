@@ -114,7 +114,7 @@ function share_it() {
     var url = document.location.href.replace('#','?motto=');
     var tweet_text = "My #GoT house motto: " + motto_words;
     var markup = "<h3>Share your house words</h3>\n\
-<a class=\"twitter-share\" href='http://twitter.com/share?url=" + url + "&text=" + tweet_text + "&via=nydni' target='_blank'>\n\
+<a class=\"twitter-share\" href='http://twitter.com/share?url=" + url + "&text=" + tweet_text + "&via=nydni&related=nydailynews' target='_blank'>\n\
 <button class='share social_icon_box twitter_button'>Share On Twitter</button></a>&nbsp;\n\
 <a class=\"fb-share\" href='http://www.facebook.com/sharer.php?u=" + url + "' target='_blank'>\n\
 <button class='share social_icon_box facebook_button'>Share On Facebook</button></a>\n\
@@ -132,7 +132,7 @@ function load_motto(hash, data) {
     $('#motto-image').removeClass('initial');
     $('#motto-image').attr('src','img/shield-'+ shield_id + '.png');
 
-    var new_name = full.titles[motto_id];
+    var new_name = markov.titles[motto_id];
     $('#motto-image').attr('alt', new_name);
     $('#motto').text(new_name);
 }
@@ -141,6 +141,12 @@ var count = 0;
 var ad = 1;
 var ad_id = 'div-gpt-ad-1423507761396-';
 function generate_motto() {
+    var house = '';
+    var house_input = document.getElementById('house').value.trim();
+    if ( house_input !== '' ) {
+        house = 'House ' + house_input;
+        document.getElementById('house-name').textContent = house;
+    }
     if ( count == 0 ) {
         $('#motto-image').removeClass('initial');
         //document.getElementById("save-motto").disabled = false;
@@ -171,12 +177,12 @@ function generate_motto() {
         });
     }
 
-    var motto_id = Math.floor(Math.random() * 26);
-    var motto_img = 'img/shield-' + motto_id + '.png';
+    var shield_id = Math.floor(Math.random() * 26);
+    var motto_img = 'img/shield-' + shield_id + '.png';
     var new_name = full.pick();
     $('#motto-image').attr('src', motto_img);
     $('#motto-image').attr('alt',new_name);
-    window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + convert_to_id(new_name) + '_' + motto_id);
+    window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + convert_to_id(new_name) + '_' + shield_id);
     $('#motto').text(new_name);
 }
 
