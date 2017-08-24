@@ -56,7 +56,7 @@ markov.init();
 
 // Instead of markov-chaining a title together, just pick a random one from the list.
 var full = {
-    titles: markov.titles,
+    titles: markov.titles.slice(0),
     init: function () {},
     pick: function() {
         var i = Math.floor(this.titles.length * Math.random());
@@ -71,7 +71,7 @@ var full = {
 };
 
 function convert_to_id(text) {
-    return markov.titles.indexOf(text.toLowerCase());
+    return markov.titles.indexOf(text);
 }
 function convert_to_slug(text) {
     return text
@@ -129,21 +129,26 @@ function share_it() {
 <button class='share social_icon_box facebook_button'>Share On Facebook</button></a>\n\
 </div>";
     $('#motto-share').html(markup);
-
 }
+
 function load_motto(hash) {
     // PERMALINK
     // When a permalink is loaded, return the item
     window.history.replaceState('', '', document.location.origin + document.location.pathname);
-    var pieces = hash.substr(1).split('_');
-    var motto_id = pieces[0].split('-');
-    var shield_id = pieces[1];
-    $('#motto-image').removeClass('initial');
-    $('#motto-image').attr('src','img/shield-'+ shield_id + '.png');
+    $( document ).ready(function() {
+        var pieces = hash.substr(1).split('_');
+        var motto_id = +pieces[0];
+        var shield_id = +pieces[1];
 
-    var new_name = markov.titles[motto_id];
-    $('#motto-image').attr('alt', new_name);
-    $('#motto').text(new_name);
+        $('#motto-image').removeClass('initial');
+        $('#motto-image').attr('src','img/shield-'+ shield_id + '.png');
+
+        var new_name = markov.titles[motto_id];
+        console.log("HI", pieces, motto_id, shield_id, new_name);
+        $('#motto-image').attr('alt', new_name);
+        $('#motto').text(new_name);
+        console.log('aaaa');
+    });
 }
 
 var count = 0;
