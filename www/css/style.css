@@ -257,6 +257,7 @@ article p.byline {
 
     .ad {
         height: 250px;
+        overflow-y: hidden;
     }
 }
 /* TABLET-SPECIFIC */
