@@ -33,7 +33,7 @@
     <!-- THUMBNAIL IMAGE-->
     <meta property="og:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/<?php echo $share_img; ?>.png" />
     <meta name="twitter:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/<?php echo $share_img; ?>.png" />
-    <meta name="twitter:image:alt" content="A photo of Joffrey Lannister from Game of Thrones (when he was alive)" />
+    <meta name="twitter:image:alt" content="" />
     <meta property="og:image:width" content="<?php echo $share_width; ?>" />
     <meta property="og:image:height" content="<?php echo $share_height; ?>" />
 
@@ -45,7 +45,7 @@
             "headline": "Game of Thrones House Motto Generator",
             "url": "http://interactive.nydailynews.com/project/game-of-thrones-house/",
             "thumbnailUrl": "http://interactive.nydailynews.com/project/game-of-thrones-house/img/share.png",
-            "dateCreated": "2017-08-04T09:00:00Z",
+            "dateCreated": "2017-08-25T09:00:00Z",
             "articleSection": "Interactive",
             "creator": ["Joe Murphy", "Kelli R. Parker", "Interactive Project"],
             "keywords": ["interactive project","interactive","game of thrones"]
@@ -86,14 +86,14 @@
         };
         var nydnDO = [ { 
             'title':'xxxGame of Thrones House Motto Generatorxxx', 
-            'link':'CANONICAL', 
+            'link':'http://interactive.nydailynews.com/project/game-of-thrones-house/', 
             'p_type':'interactive', 
             'section':'interactive' 
         }];
     </script>
     
     <!-- ADS-START -->
-    <script onload="nydn_ads('one');" src="http://interactive.nydailynews.com/includes/ads/ads.js"></script>
+    <script onload="nydn_ads('game-of-thrones');" src="http://interactive.nydailynews.com/includes/ads/ads.js"></script>
     <!-- ADS-END -->
 
     <script src="http://interactive.nydailynews.com/js/jquery.min.js"></script>
@@ -126,7 +126,7 @@
     </ul>
 
 	<p>From the menacing “Ours is the Fury,” to the well-known “Winter is Coming,” every noble house in Westeros has an official family motto. Like House Targaryen's “Fire and Blood,” most of the words are threats, boasts or battle cries. Others are more ambiguous, like the Tyrell's “Growing Strong” or the Greyjoy's “We Do Not Sow.”</p>
-    <p>Create your own family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient High Valerian and may not make sense in the common tongue.</p>
+    <p><strong>Create your own family catchphrase</strong> with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient High Valerian and may not make sense in the common tongue.</p>
 
     <input placeholder="Enter your house name" id="house" type="text">
 
