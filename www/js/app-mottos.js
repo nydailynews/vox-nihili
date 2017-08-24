@@ -69,11 +69,8 @@ var full = {
     }
 };
 
-function convert_to_slug(text) {
-    return text
-        .toLowerCase()
-        .replace(/[^\w ]+/g,'')
-        .replace(/ +/g,'-');
+function convert_to_id(text) {
+    return markov.titles.indexOf(text);
 }
 
 function save_motto() {
@@ -92,7 +89,7 @@ function save_image()
             window.oCanvas = window.oCanvas[0];
             var strDataURI = window.oCanvas.toDataURL();
 
-            var filename = convert_to_slug($('#motto').text());
+            var filename = convert_to_id($('#motto').text());
 
             var a = $("<a>").attr("href", strDataURI).attr("download", "motto-" + filename + ".png").appendTo("body");
             a[0].click();
@@ -107,17 +104,12 @@ function save_image()
     });
 }
 
-function random(list) {
-    var i = Math.floor(Math.random() * list.length);
-    return list[i];
-}
-
-function share_motto() {
+function share_it() {
     // PERMALINK
     // Edit the URL to make the image permalinkable
     var motto_words = $('#motto').text();
     var shield_id = $('#motto-image').attr('src').replace('img/shield-','').replace('.png','');
-    var slug = convert_to_slug(motto_words);
+    var slug = convert_to_id(motto_words);
     document.location.hash = '#' + slug + '_' + shield_id;
     var url = document.location.href.replace('#','?motto=');
     var tweet_text = "My #GoT house motto: " + motto_words;
@@ -184,7 +176,7 @@ function generate_motto() {
     var new_name = full.pick();
     $('#motto-image').attr('src', motto_img);
     $('#motto-image').attr('alt',new_name);
-    window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + convert_to_slug(new_name) + '_' + motto_id);
+    window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + convert_to_id(new_name) + '_' + motto_id);
     $('#motto').text(new_name);
 }
 
