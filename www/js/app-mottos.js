@@ -44,12 +44,13 @@ var markov = {
         return title.join(' ');
     },
     length: 1,
-    load_title: function(id) {
+    load_title: function() {
         var floor = 4;
         var min = floor + Math.floor(2 * Math.random());
         var max = min + Math.floor(8 * Math.random());
         var title = this.make_title(min, max);
         document.getElementById('motto').innerHTML = title;
+        return title;
     },
 }
 markov.init();
@@ -59,11 +60,16 @@ var full = {
     titles: markov.titles.slice(0),
     init: function () {},
     pick: function() {
-        var i = Math.floor(this.titles.length * Math.random());
-        var t = this.titles[i];
-        this.load_title(t);
-        // Make sure the same title isn't loaded more than once
-        this.titles.splice(i, 1);
+        if ( this.titles.length > 0 ) {
+            var i = Math.floor(this.titles.length * Math.random());
+            var t = this.titles[i];
+            this.load_title(t);
+            // Make sure the same title isn't loaded more than once
+            this.titles.splice(i, 1);
+        }
+        else {
+            var t = markov.load_title();
+        };
         return t;
     },
     load_title: function(title) {
@@ -189,7 +195,7 @@ function generate_motto() {
         if ( count % 30 == 1 ) googletag.pubads().refresh();
     }
     if ( count % 5 == 0 ) {
-        // Add a PV every five mottos
+        // Add a PV every few mottos
         if ( typeof PARSELY !== 'undefined' ) {
             PARSELY.beacon.trackPageView({
                 url: document.location.href,
