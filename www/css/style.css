@@ -84,8 +84,8 @@ article {
     display: block;
     text-align: center;
     width: 600px;
-    height: 400px;
-    margin: 25px auto;
+    height: 390px;
+    margin: 15px auto;
 }
 
 input {
@@ -127,14 +127,16 @@ input:-moz-placeholder   {color:transparent;}
     margin-right: 30px;
 }
 
+#words-container {
+    position: relative;
+    top: 25%;
+}
+
 #motto {
     color: #F1EADA;
     font: normal 36px 'Metamorphous', cursive;
     line-height: 50px;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-bottom: 20px;
 }
 
 #motto:first-letter {
@@ -145,14 +147,13 @@ h4 {
     color: #F1EADA;
     font: normal 20px 'Metamorphous', cursive;
     text-transform: uppercase;
-    position: relative;
-    top: 40%;
-    transform: translateY(-50%);
 }
+
 #house-name:before,
 #house-name:after {
     /* per http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/ */
     content: "\2666";
+    padding: 8px;
 }
 
 button {
@@ -234,6 +235,7 @@ article p.byline {
         width: 90%;
         margin: 0;
     }
+
     #motto {
         font-size: 24px;
         line-height: 34px;
@@ -248,7 +250,7 @@ article p.byline {
         transform: none;
     }
     button {
-        margin-top: 17px;
+        margin-top: 50px;
     }
     button + button {
         display: none;
