@@ -144,10 +144,8 @@ function load_motto(hash) {
         $('#motto-image').attr('src','img/shield-'+ shield_id + '.png');
 
         var new_name = markov.titles[motto_id];
-        console.log("HI", pieces, motto_id, shield_id, new_name);
         $('#motto-image').attr('alt', new_name);
         $('#motto').text(new_name);
-        console.log('aaaa');
     });
 }
 

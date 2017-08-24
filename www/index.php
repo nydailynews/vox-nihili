@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Game of Thrones House Motto Generator</title>
+    <title>Game of Thrones House Motto Generator - NY Daily News</title>
     <link rel="icon" type="image/png" href="http://interactive.nydailynews.com/favicons.png">
     <!-- DEFAULT -->
     <meta charset="utf-8" />
@@ -31,11 +31,11 @@
     <meta name="twitter:url" content="http://interactive.nydailynews.com/project/game-of-thrones-house/" />
 
     <!-- THUMBNAIL IMAGE-->
-    <meta property="og:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/<?php echo $share_img; ?>.png" />
-    <meta name="twitter:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/<?php echo $share_img; ?>.png" />
+    <meta property="og:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/share.png" />
+    <meta name="twitter:image" content="http://interactive.nydailynews.com/project/game-of-thrones-house/img/share.png" />
     <meta name="twitter:image:alt" content="" />
-    <meta property="og:image:width" content="<?php echo $share_width; ?>" />
-    <meta property="og:image:height" content="<?php echo $share_height; ?>" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="512" />
 
     <!-- PARSELY -->
     <script type="application/ld+json">
@@ -73,7 +73,7 @@
     <!-- ADOBE ANALYTICS -->
     <script src="//assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-c91fdc6ac624c6cbcd50250f79786de339793801.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Metamorphous|Open%20Sans|Open+Sans+Condensed:300,700|PT+Serif' rel='stylesheet' type='text/css'>
-    <script data-main="http://assets.nydailynews.com/nydn/js/rh.js?r=20170405001" src="http://assets.nydailynews.com/nydn/js/require.js?r=2016LIST" defer></script>
+    <script data-main="//assets.nydailynews.com/nydn/js/rh.js?r=20170405001" src="//assets.nydailynews.com/nydn/js/require.js?r=2016LIST" defer></script>
       
     <script>
         var nydn = nydn || {
@@ -93,17 +93,17 @@
     </script>
     
     <!-- ADS-START -->
-    <script onload="nydn_ads('game-of-thrones');" src="http://interactive.nydailynews.com/includes/ads/ads.js"></script>
+    <script onload="nydn_ads('gameofthrones');" src="//interactive.nydailynews.com/includes/ads/ads.js"></script>
     <!-- ADS-END -->
 
-    <script src="http://interactive.nydailynews.com/js/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://assets.nydailynews.com/nydn/c/rh.css">
-    <link rel="stylesheet" type="text/css" href="http://assets.nydailynews.com/nydn/c/ra.css">
+    <script src="//interactive.nydailynews.com/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//assets.nydailynews.com/nydn/c/rh.css">
+    <link rel="stylesheet" type="text/css" href="//assets.nydailynews.com/nydn/c/ra.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/app-mottos.js"></script>
 
     <script>var nav_params = {section: 'projects', url: 'http://interactive.nydailynews.com/project/'};</script>
-    <script src="http://interactive.nydailynews.com/library/vendor-nav/vendor-include.js" defer></script>
+    <script src="//interactive.nydailynews.com/library/vendor-nav/vendor-include.js" defer></script>
 </head>
 
 <body id="nydailynews" data-section="nydailynews" data-subsection="NY Daily News">
@@ -172,6 +172,7 @@
 </div>
 </article>
 </main>
+<script src="http://interactive.nydailynews.com/js/html2canvas/0.4.1/html2canvas.js"></script>
 
 <!-- CONTENT-END -->
 
@@ -194,7 +195,6 @@
         <div id="div-gpt-ad-x100"></div>
     </div>
 </div>
-<script src="http://interactive.nydailynews.com/js/html2canvas/0.4.1/html2canvas.js"></script>
 
 </body>
 </html>
