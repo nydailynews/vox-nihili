@@ -84,8 +84,8 @@ article {
     display: block;
     text-align: center;
     width: 600px;
-    height: 390px;
-    margin: 15px auto;
+    height: 400px;
+    margin: 25px auto;
 }
 
 input {
@@ -114,31 +114,27 @@ input:-moz-placeholder   {color:transparent;}
 
 .black {
     background-color: black;
-    padding: 15px;
-}
-.black #motto, .black #house-name, .black #motto:first-letter {
-    text-transform: none;
-}
-.black #house-name:before,
-.black #house-name:after {
-    content: "";
-    padding: 0;
 }
 
 #motto-image {
     float: left;
+    margin-right: 15px;
 }
 
 #words-container {
+    width: 275px;
+    height: auto;
+    display: inline-block;
     position: relative;
-    top: 25%;
+    top: 50%;
+    transform: translateY(-50%);    
 }
 
 #motto {
     color: #F1EADA;
     font: normal 36px 'Metamorphous', cursive;
     line-height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #motto:first-letter {
@@ -148,14 +144,13 @@ input:-moz-placeholder   {color:transparent;}
 h4 {
     color: #F1EADA;
     font: normal 17px 'Metamorphous', cursive;
+    line-height: 27px;
     text-transform: uppercase;
 }
 
-#house-name:before,
-#house-name:after {
-    /* per http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/ */
-    content: "\2666";
-}
+#house-name:before, #house-name:after {
+    content: "\2666"; /*per http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/*/
+} 
 
 button {
     border: 2px solid #F1EADA;
@@ -177,7 +172,7 @@ button:disabled, button[disabled] {
 }
 
 #url {
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 13px;
     color: #eee;
 }
@@ -233,16 +228,9 @@ article p.byline {
         width: 90%;
         margin: 0;
     }
-
-    #words-container {
-        position: unset;
-        top: unset;
-    }
-
     #motto {
         font-size: 24px;
         line-height: 34px;
-        margin-bottom: 10px;
         position: unset;
         top: unset;
         transform: none;
@@ -254,7 +242,7 @@ article p.byline {
         transform: none;
     }
     button {
-        margin-top: 50px;
+        margin-top: 17px;
     }
     button + button {
         display: none;
@@ -262,7 +250,6 @@ article p.byline {
 
     .ad {
         height: 250px;
-        overflow-y: hidden;
     }
 }
 /* TABLET-SPECIFIC */
