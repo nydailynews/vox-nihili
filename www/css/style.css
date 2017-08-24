@@ -116,10 +116,13 @@ input:-moz-placeholder   {color:transparent;}
     background-color: black;
     padding: 15px;
 }
-.black:after {
-}
-.black #motto:first-letter {
+.black #motto, .black #house-name, .black #motto:first-letter {
     text-transform: none;
+}
+.black #house-name:before,
+.black #house-name:after {
+    content: "";
+    padding: 0;
 }
 
 #motto-image {
@@ -174,12 +177,9 @@ button:disabled, button[disabled] {
 }
 
 #url {
-    margin-top: 20px;
+    margin-top: 80px;
     font-size: 13px;
     color: #eee;
-    position: relative;
-    top: 65%;
-    transform: translateY(-50%);
 }
 article p.byline {
     color: white;

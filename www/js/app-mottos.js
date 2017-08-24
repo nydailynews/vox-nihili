@@ -90,6 +90,8 @@ function save_image()
 {
     html2canvas($('#card'), {
         allowTaint: true,
+        background: '#000',
+        letterRendering: true,
         onrendered: function(canvas) {
 
             document.body.appendChild(canvas);
