@@ -85,7 +85,7 @@ article {
     text-align: center;
     width: 600px;
     height: 400px;
-    margin: 25px auto;
+    margin: 25px auto 0 auto;
 }
 
 input {
@@ -113,21 +113,16 @@ input:focus::-moz-placeholder   {color:transparent;}
 input:-moz-placeholder   {color:transparent;}
 
 .black {
-    background-color: black;
-    padding: 15px;
+    background-color: #333;
+    padding: 10px;
 }
-.black #motto, .black #house-name, .black #motto:first-letter {
-    text-transform: unset;
-}
-.black #house-name:before,
-.black #house-name:after {
-    content: "";
-    padding: 0;
+
+.black #motto {
+    font-size: 30px;
 }
 
 #motto-image {
     float: left;
-    margin-right: 15px;
 }
 
 #words-container {
@@ -146,21 +141,12 @@ input:-moz-placeholder   {color:transparent;}
     margin-bottom: 15px;
 }
 
-#motto:first-letter {
-    text-transform: uppercase;
-}
-
 h4 {
     color: #F1EADA;
     font: normal 17px 'Metamorphous', cursive;
     line-height: 27px;
     text-transform: uppercase;
 }
-
-#house-name:before, #house-name:after {
-    content: "\2666"; /*per http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/*/
-    padding: 5px;
-} 
 
 button {
     border: 2px solid #F1EADA;
@@ -176,20 +162,17 @@ button + button {
     margin-left: 50px;
 }
 
-button:disabled, button[disabled] {
-  border: 1px solid #999999;
-  color: #b4b4b4;
-}
-
 #url {
     margin-top: 20px;
     font-size: 13px;
-    color: #eee;
+    color: #F1EADA;
+    text-align: center;
 }
+
 article p.byline {
     color: white;
     font-size: 12px;
-    margin-bottom: 30px;
+    margin: 10px;
 }
 
 .hide {
@@ -259,6 +242,10 @@ article p.byline {
         position: unset;
         top: unset;
         transform: none;
+    }
+
+    #save {
+        display: none;
     }
     button {
         margin-top: 45px;

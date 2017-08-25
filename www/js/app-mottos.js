@@ -96,9 +96,7 @@ function save_motto() {
 function save_image()
 {
     html2canvas($('#card'), {
-        allowTaint: false,
-        background: '#000',
-        letterRendering: true,
+        allowTaint: true,
         onrendered: function(canvas) {
 
             document.body.appendChild(canvas);
@@ -153,6 +151,7 @@ function load_motto(hash) {
 
     var new_name = markov.titles[motto_id];
     $('#motto-image').attr('alt', new_name);
+    new_name = jsUcfirst(new_name);
     $('#motto').text(new_name);
 }
 
@@ -165,7 +164,7 @@ function generate_motto() {
     var house_input = document.getElementById('house').value.trim();
     if ( house_input !== '' ) {
         house = 'House ' + house_input;
-        document.getElementById('house-name').textContent = house;
+        document.getElementById('house-name').textContent = "♦ " + house + " ♦";
         $('#house-name').removeClass('hide');
     }
     else {
@@ -212,7 +211,13 @@ function generate_motto() {
     $('#motto-image').attr('src', motto_img);
     $('#motto-image').attr('alt', new_name);
     window.history.replaceState('', '', document.location.origin + document.location.pathname + '#' + motto_id + '_' + shield_id);
+    new_name = jsUcfirst(new_name);
     $('#motto').text(new_name);
+}
+
+function jsUcfirst(string) 
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 $(document).ready(function() {
