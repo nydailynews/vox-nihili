@@ -156,7 +156,7 @@
             <div id="words-container">
                 <h3 id="motto"></h3>
                 <h4 id="house-name" class="hide"></h4>
-                <p id="url" class="hide">http://nydn.us/mottos</p>
+                <!-- <p id="url" class="hide">http://nydn.us/mottos</p> -->
             </div>
         
     </div>
