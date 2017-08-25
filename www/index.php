@@ -44,7 +44,7 @@
             "@type": "NewsArticle",
             "headline": "Game of Thrones House Motto Generator",
             "url": "http://interactive.nydailynews.com/project/game-of-thrones-house/",
-            "thumbnailUrl": "http://interactive.nydailynews.com/project/game-of-thrones-house/img/share.png",
+            "thumbnailUrl": "http://interactive.nydailynews.com/project/game-of-thrones-house/img/motto-share.jpg",
             "dateCreated": "2017-08-25T09:00:00Z",
             "articleSection": "Interactive",
             "creator": ["Joe Murphy", "Kelli R. Parker", "Interactive Project"],
