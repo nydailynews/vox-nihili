@@ -43,7 +43,7 @@
             "@type": "NewsArticle",
             "headline": "Game of Thrones House Motto Generator",
             "url": "http://interactive.nydailynews.com/project/game-of-thrones-house/",
-            "thumbnailUrl": "http://interactive.nydailynews.com/project/game-of-thrones-house/img/share.png",
+            "thumbnailUrl": "http://interactive.nydailynews.com/project/game-of-thrones-house/img/motto-share.jpg",
             "dateCreated": "2017-08-25T09:00:00Z",
             "articleSection": "Interactive",
             "creator": ["Joe Murphy", "Kelli R. Parker", "Interactive Project"],
@@ -71,7 +71,7 @@
 
     <!-- ADOBE ANALYTICS -->
     <script src="//assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-c91fdc6ac624c6cbcd50250f79786de339793801.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Metamorphous|Open%20Sans|Open+Sans+Condensed:300,700|PT+Serif' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Metamorphous|Open+Sans|Open+Sans+Condensed:700|PT+Serif" rel="stylesheet">
     <script data-main="//interactive.nydailynews.com/nydn/js/rh.js?r=20170405001" src="//interactive.nydailynews.com/nydn/js/require.js?r=2016LIST" defer></script>
       
     <script>
@@ -99,7 +99,7 @@
     <link rel="stylesheet" type="text/css" href="//interactive.nydailynews.com/nydn/c/rh.css">
     <link rel="stylesheet" type="text/css" href="//interactive.nydailynews.com/nydn/c/ra.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/app-mottos.js"></script>
+    <script src="js/app-mottos.js"></script>
 
     <script>var nav_params = {section: 'projects', url: 'http://interactive.nydailynews.com/project/'};</script>
     <script src="//interactive.nydailynews.com/library/vendor-nav/vendor-include.js" defer></script>
@@ -110,12 +110,12 @@
 <!-- SITEHEADER-START -->
 <header id="templateheader"></header>
 <!-- SITEHEADER-END -->
-
+<script src="http://interactive.nydailynews.com/js/html2canvas/0.4.1/html2canvas.js"></script>
 <!-- CONTENT-START -->
 <main>
 <article>
 <section class="main-text">
-	<h1><abbr title="Game of Thrones Motto">GoT</abbr></h1>
+    <h1><abbr title="Game of Thrones Motto">GoT</abbr></h1>
     <h2>House Motto Generator</h2>
 
     <ul class="ra-share" id="ra-share-top">
@@ -124,33 +124,33 @@
         <li class="ra-share-e"> <a href="mailto:?subject=Game of Thrones house motto generator&body=http://interactive.nydailynews.com/project/game-of-thrones-house/">email</a> </li>
     </ul>
 
-	<p>From the menacing “Ours is the Fury,” to the well-known “Winter is Coming,” every noble house in Westeros has an official family motto. CREATE YOUR OWN family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient High Valyrian and may not make sense in the common tongue.</p>
+    <p>From the menacing “Ours is the Fury,” to the well-known “Winter is Coming,” every noble house in Westeros has an official family motto. CREATE YOUR OWN family catchphrase with our <a href="http://www.nydailynews.com/tags/game-of-thrones">Game of Thrones</a> house motto generator. Be aware: some of these have been translated from ancient High Valyrian and may not make sense in the common tongue.</p>
 
     <input placeholder="Enter your house name" id="house" type="text">
 
     <div class="action-box" id="card">
         <img id="motto-image" src="img/shield-start.png" alt="an image of a shield with Latin on it">
-		<div class="ad center hide" id="ad1">
-			<div id='div-gpt-ad-1423507761396-1'>
-				<script>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-1'); });
-				</script>
-			</div>
-		</div>
-		<div class="ad center hide" id="ad2">
-			<div id='div-gpt-ad-1423507761396-2'>
-				<script>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-2'); });
-				</script>
-			</div>
-		</div>
-		<div class="ad center hide" id="ad3">
-			<div id='div-gpt-ad-1423507761396-3'>
-				<script>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-3'); });
-				</script>
-			</div>
-		</div>
+        <div class="ad center hide" id="ad1">
+            <div id='div-gpt-ad-1423507761396-1'>
+                <script>
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-1'); });
+                </script>
+            </div>
+        </div>
+        <div class="ad center hide" id="ad2">
+            <div id='div-gpt-ad-1423507761396-2'>
+                <script>
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-2'); });
+                </script>
+            </div>
+        </div>
+        <div class="ad center hide" id="ad3">
+            <div id='div-gpt-ad-1423507761396-3'>
+                <script>
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-3'); });
+                </script>
+            </div>
+        </div>
 
             <div id="words-container">
                 <h3 id="motto"></h3>
@@ -160,10 +160,8 @@
         
     </div>
 
-	<button onClick="generate_motto();" id="generate-name">Make a Motto</button>
-<!--
-	<button onClick="save_motto();" id="save">Save This Motto</button>
--->
+    <button onClick="generate_motto();" id="generate-name">Make a Motto</button>
+    <button onClick="save_motto();" id="save">Save This Motto</button>
 </section>
     <p class="byline">Interactive by Joe Murphy and Kelli R. Parker</p>
 
@@ -176,7 +174,6 @@
 </div>
 </article>
 </main>
-<script src="http://interactive.nydailynews.com/js/html2canvas/0.4.1/html2canvas.js"></script>
 
 <!-- CONTENT-END -->
 
