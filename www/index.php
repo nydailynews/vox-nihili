@@ -93,7 +93,7 @@
     </script>
     
     <!-- ADS-START -->
-    <script onload="nydn_ads('gameofthrones');" src="//interactive.nydailynews.com/includes/ads/ads.js"></script>
+    <script onload="nydn_ads('gameofthrones');" src="//interactive.nydailynews.com/includes/template/template.js"></script>
     <!-- ADS-END -->
 
     <script src="//interactive.nydailynews.com/js/jquery.min.js"></script>
