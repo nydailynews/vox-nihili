@@ -23,7 +23,6 @@
 
     <!-- KEYWORD -->
     <meta name="keywords" content="Game of Thrones,house motto generator,house words generator, shields" />
-    <meta name="news_keywords" content="Game of Thrones,house motto generator,house words generator, shields" />
 
     <!-- LINK -->
     <link rel="canonical" href="http://interactive.nydailynews.com/project/game-of-thrones-house/">
@@ -73,7 +72,7 @@
     <!-- ADOBE ANALYTICS -->
     <script src="//assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-c91fdc6ac624c6cbcd50250f79786de339793801.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Metamorphous|Open%20Sans|Open+Sans+Condensed:300,700|PT+Serif' rel='stylesheet' type='text/css'>
-    <script data-main="//assets.nydailynews.com/nydn/js/rh.js?r=20170405001" src="//assets.nydailynews.com/nydn/js/require.js?r=2016LIST" defer></script>
+    <script data-main="//interactive.nydailynews.com/nydn/js/rh.js?r=20170405001" src="//interactive.nydailynews.com/nydn/js/require.js?r=2016LIST" defer></script>
       
     <script>
         var nydn = nydn || {
@@ -97,8 +96,8 @@
     <!-- ADS-END -->
 
     <script src="//interactive.nydailynews.com/js/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//assets.nydailynews.com/nydn/c/rh.css">
-    <link rel="stylesheet" type="text/css" href="//assets.nydailynews.com/nydn/c/ra.css">
+    <link rel="stylesheet" type="text/css" href="//interactive.nydailynews.com/nydn/c/rh.css">
+    <link rel="stylesheet" type="text/css" href="//interactive.nydailynews.com/nydn/c/ra.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/app-mottos.js"></script>
 
